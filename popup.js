@@ -10,10 +10,19 @@ const refreshBtn = document.getElementById("refreshBtn");
 siteForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   const name = document.getElementById("siteName").value.trim();
+
+  const html = document.getElementById("siteHtml").value.trim();
+  const css = document.getElementById("siteCss").value.trim();
+  const js = document.getElementById("siteJs").value.trim();
+
+  if (!name || !html) {
+    setStatus("사이트 이름과 HTML을 입력해주세요.", true);
+
   const content = document.getElementById("siteContent").value.trim();
 
   if (!name || !content) {
     setStatus("사이트 이름과 내용을 입력해주세요.", true);
+
     return;
   }
 
@@ -21,7 +30,13 @@ siteForm.addEventListener("submit", async (event) => {
   sites.unshift({
     id: crypto.randomUUID(),
     name,
+
+    html,
+    css,
+    js,
+
     content,
+
     updatedAt: new Date().toISOString(),
   });
 
@@ -138,17 +153,38 @@ function saveSites(sites) {
   return chrome.storage.sync.set({ [SITE_KEY]: sites });
 }
 
+
+function normalizeSite(site) {
+  return {
+    name: site.name,
+    html: site.html ?? site.content ?? "",
+    css: site.css ?? "",
+    js: site.js ?? "",
+  };
+}
+
+function encodeShareCode(site) {
+  const payload = normalizeSite(site);
+
 function encodeShareCode(site) {
   const payload = {
     name: site.name,
     content: site.content,
   };
+
   return btoa(unescape(encodeURIComponent(JSON.stringify(payload))));
 }
 
 function decodeShareCode(code) {
   const text = decodeURIComponent(escape(atob(code)));
   const data = JSON.parse(text);
+
+  const normalized = normalizeSite(data);
+  if (!normalized.name || !normalized.html) {
+    throw new Error("Invalid payload");
+  }
+  return normalized;
+
   if (!data.name || !data.content) {
     throw new Error("Invalid payload");
   }

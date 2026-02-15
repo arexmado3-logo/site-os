@@ -8,6 +8,33 @@
       body {
         margin: 0;
         font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+
+        background: transparent;
+        color: #111827;
+      }
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .title {
+        margin: 0 0 8px;
+      }
+      .hint {
+        margin: 0 0 12px;
+        color: #6b7280;
+        font-size: 13px;
+      }
+      iframe {
+        width: 100%;
+        min-height: 75vh;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        background: transparent;
+      }
+      .error {
+        color: #dc2626;
+=======
         background: #111827;
         color: #f9fafb;
       }
@@ -31,15 +58,22 @@
       }
       .error {
         color: #fca5a5;
+
       }
     </style>
   </head>
   <body>
     <main>
+
+      <h1 id="title" class="title">로딩 중...</h1>
+      <p class="hint">기본 배경은 무색(transparent)입니다.</p>
+      <iframe id="siteFrame" sandbox="allow-scripts"></iframe>
+
       <article>
         <h1 id="title">로딩 중...</h1>
         <pre id="content"></pre>
       </article>
+
       <p class="error" id="error"></p>
     </main>
     <script src="viewer.js"></script>
