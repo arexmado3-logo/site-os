@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Site OS Share",
+  "description": "여러 개의 나만의 사이트를 만들고, 확장 사용자끼리 공유할 수 있습니다.",
+  "version": "1.0.0",
+  "permissions": ["storage"],
+  "action": {
+    "default_title": "Site OS",
+    "default_popup": "popup.html"
+  }
+}
