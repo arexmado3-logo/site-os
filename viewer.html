@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site OS Viewer</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+        background: #111827;
+        color: #f9fafb;
+      }
+      main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
+      article {
+        background: #1f2937;
+        border: 1px solid #374151;
+        border-radius: 12px;
+        padding: 20px;
+      }
+      h1 {
+        margin-top: 0;
+      }
+      pre {
+        white-space: pre-wrap;
+        line-height: 1.5;
+      }
+      .error {
+        color: #fca5a5;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1 id="title">로딩 중...</h1>
+        <pre id="content"></pre>
+      </article>
+      <p class="error" id="error"></p>
+    </main>
+    <script src="viewer.js"></script>
+  </body>
+</html>
