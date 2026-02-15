@@ -38,3 +38,7 @@ GitHub Wiki로 옮겨서 사용할 수 있는 문서 초안을 `wiki/` 폴더에
 - `viewer.html`, `viewer.js`: 공유된 사이트 뷰어
 - `wiki/*`: GitHub Wiki용 문서 모음
 
+---
+
+이 문서는 **Codex**와 **ChatGPT**의 도움을 받아 생성 및 정리되었습니다.  
+일부 내용은 자동 생성되었으며, 최종 검토 및 수정은 사람이 진행했습니다.
