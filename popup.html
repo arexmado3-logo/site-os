@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site OS</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Site OS</h1>
+      <p class="subtitle">나만의 사이트를 여러 개 만들고 공유하세요.</p>
+
+      <section class="card">
+        <h2>새 사이트 만들기</h2>
+        <form id="siteForm">
+          <label>
+            사이트 이름
+            <input id="siteName" maxlength="40" required placeholder="예: 내 포트폴리오" />
+          </label>
+          <label>
+            사이트 본문 (마크다운처럼 자유롭게)
+            <textarea id="siteContent" rows="7" required placeholder="여기에 사이트 내용을 작성하세요"></textarea>
+          </label>
+          <button type="submit">저장</button>
+        </form>
+      </section>
+
+      <section class="card">
+        <div class="title-row">
+          <h2>내 사이트 목록</h2>
+          <button id="refreshBtn" class="secondary">새로고침</button>
+        </div>
+        <ul id="siteList" class="site-list"></ul>
+      </section>
+
+      <section class="card">
+        <h2>공유 코드로 가져오기</h2>
+        <form id="importForm">
+          <textarea id="shareCode" rows="4" placeholder="공유 코드를 붙여넣으세요" required></textarea>
+          <button type="submit">가져오기</button>
+        </form>
+        <p id="status" class="status"></p>
+      </section>
+    </main>
+
+    <template id="siteItemTemplate">
+      <li class="site-item">
+        <div>
+          <h3 class="site-title"></h3>
+          <p class="site-updated"></p>
+        </div>
+        <div class="actions">
+          <button data-action="preview" class="secondary">미리보기</button>
+          <button data-action="share" class="secondary">공유코드</button>
+          <button data-action="delete" class="danger">삭제</button>
+        </div>
+      </li>
+    </template>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
