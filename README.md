@@ -22,7 +22,19 @@ Chrome 확장으로 **여러 개의 나만의 사이트를 저장**하고, **공
 4. 상대방도 같은 확장을 설치한 뒤, "공유 코드로 가져오기"에 붙여넣기
 5. **미리보기** 버튼으로 렌더링 화면 확인
 
+
+## Wiki
+GitHub Wiki로 옮겨서 사용할 수 있는 문서 초안을 `wiki/` 폴더에 추가했습니다.
+- 시작 페이지: `wiki/Home.md`
+- 설치 가이드: `wiki/설치 가이드.md`
+- 사용자 가이드: `wiki/사용자 가이드.md`
+- 공유 코드 동작 원리: `wiki/공유 코드 동작 원리.md`
+- 문제 해결: `wiki/문제 해결 (FAQ).md`
+
+
 ## 파일 구조
 - `manifest.json`: Chrome Extension Manifest v3 설정
 - `popup.html`, `popup.css`, `popup.js`: 메인 UI와 로직
 - `viewer.html`, `viewer.js`: 공유된 사이트 뷰어
+- `wiki/*`: GitHub Wiki용 문서 모음
+
