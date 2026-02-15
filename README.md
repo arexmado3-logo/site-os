@@ -31,7 +31,6 @@ GitHub Wiki로 옮겨서 사용할 수 있는 문서 초안을 `wiki/` 폴더에
 - 공유 코드 동작 원리: `wiki/공유 코드 동작 원리.md`
 - 문제 해결: `wiki/문제 해결 (FAQ).md`
 
-
 ## 파일 구조
 - `manifest.json`: Chrome Extension Manifest v3 설정
 - `popup.html`, `popup.css`, `popup.js`: 메인 UI와 로직
@@ -40,5 +39,11 @@ GitHub Wiki로 옮겨서 사용할 수 있는 문서 초안을 `wiki/` 폴더에
 
 ---
 
+이 문서는 ChatGPT와 Codex가 만들었습니다.
+=======
+
+---
+
 이 문서는 **Codex**와 **ChatGPT**의 도움을 받아 생성 및 정리되었습니다.  
 일부 내용은 자동 생성되었으며, 최종 검토 및 수정은 사람이 진행했습니다.
+
