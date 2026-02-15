@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Site OS Viewer</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+        background: transparent;
+        color: #111827;
+      }
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .title {
+        margin: 0 0 8px;
+      }
+      .hint {
+        margin: 0 0 12px;
+        color: #6b7280;
+        font-size: 13px;
+      }
+      iframe {
+        width: 100%;
+        min-height: 75vh;
+        border: 1px solid #e5e7eb;
+        border-radius: 12px;
+        background: transparent;
+      }
+      .error {
+        color: #dc2626;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1 id="title" class="title">로딩 중...</h1>
+      <p class="hint">기본 배경은 무색(transparent)입니다.</p>
+      <iframe id="siteFrame" sandbox="allow-scripts"></iframe>
+      <p class="error" id="error"></p>
+    </main>
+    <script src="viewer.js"></script>
+  </body>
+</html>
