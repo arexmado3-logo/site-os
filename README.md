@@ -33,7 +33,7 @@ GitHub Wiki로 옮겨서 사용할 수 있는 문서 초안을 `wiki/` 폴더에
 
 ## 다운로드
 - 배포 파일 경로: `download/site os.zip`
-- 링크: [site os.zip](download/site-os.zip)
+- 링크: [site os.zip](download/site%20os.zip)
 
 ## 파일 구조
 - `manifest.json`: Chrome Extension Manifest v3 설정
